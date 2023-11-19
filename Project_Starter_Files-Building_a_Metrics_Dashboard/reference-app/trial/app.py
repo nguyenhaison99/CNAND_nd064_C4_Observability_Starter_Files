@@ -1,8 +1,7 @@
 import logging
 import re
+
 import requests
-
-
 from flask import Flask, jsonify, render_template
 from flask_opentracing import FlaskTracing
 from jaeger_client import Config
@@ -10,7 +9,6 @@ from jaeger_client.metrics.prometheus import PrometheusMetricsFactory
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from prometheus_flask_exporter import PrometheusMetrics
-
 
 app = Flask(__name__)
 FlaskInstrumentor().instrument_app(app)
@@ -26,7 +24,6 @@ logger = logging.getLogger(__name__)
 
 
 def init_tracer(service):
-
     config = Config(
         config={
             "sampler": {"type": "const", "param": 1},
@@ -90,4 +87,4 @@ def trace():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,)
+    app.run(debug=True, )
