@@ -49,6 +49,10 @@ measure 40x and 50x errors. Create a dashboard that show these values over a 24 
 
 ![Alt text](answer-img/sli-dashboard.png)
 
+![Alt text](answer-img/front-end-app-grafana.png)
+
+#### FEEDBACK: Front-end app monitoring added
+
 ## Tracing our Flask App
 
 DONE:\_ We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a
@@ -100,12 +104,32 @@ To ensure 99.95% uptime, we use four key SLIs:
 DONE: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a
 description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
-1. **Uptime Percentage**
-    - **Description:** Measures actual uptime to meet our 99.95% uptime SLO.
-2. **Error Rate**
-    - **Description:** Tracks errors to maintain a low error rate (< 0.1%).
-3. **Response Time (Latency)**
-    - **Description:** Monitors average response time (< 200ms) for user experience.
+**Uptime SLI:**
+
+1. Uptime Percentage
+   - Measures actual uptime (99.95% SLO).
+2. Downtime Incidents
+   - Tracks incident frequency.
+3. Downtime Duration
+   - Measures incident impact duration.
+
+**Error Rate SLI:**
+
+1. Error Rate
+   - Tracks error rate (< 0.1%).
+2. Error Resolution Time
+   - Measures error resolution speed.
+3. Error Types
+   - Categorizes and tracks error types.
+
+**Response Time SLI:**
+
+1. Response Time (Latency)
+   - Monitors average response time (< 200ms).
+2. Peak Latency
+   - Identifies peak response time.
+3. Geographic Latency
+   - Analyzes regional response time.
 
 ## Final Dashboard
 

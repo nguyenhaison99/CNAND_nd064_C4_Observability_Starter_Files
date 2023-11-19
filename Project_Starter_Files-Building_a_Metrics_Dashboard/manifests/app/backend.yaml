@@ -20,7 +20,7 @@ spec:
         - env:
             - name: JAEGER_AGENT_HOST
               value: my-traces-query.observability.svc.cluster.local
-          image: nguyenson99/backend:latest
+          image: nguyenson99/back-end:latest
           imagePullPolicy: Always
           name: backend
           ports:
