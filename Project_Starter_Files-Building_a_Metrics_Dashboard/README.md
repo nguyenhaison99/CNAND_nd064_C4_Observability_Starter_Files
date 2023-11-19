@@ -138,3 +138,14 @@ SLIs and SLOs. Include a screenshot of the dashboard here, and write a text desc
 in the dashboard.
 
 ![Alt text](answer-img/overview-dashboard.png)
+
+### Grafana Dashboard Overview
+
+- **CPU % Usage (Namespace)**: Should show CPU % used by namespaces.
+- **RAM % Usage (Namespace)**: Should show RAM % used by namespaces.
+- **CPU Usage (Namespace)**: Total CPU used by all namespaces.
+- **RAM Usage (Namespace)**: Total RAM used by all namespaces.
+- **Resource Count (Kubernetes)**: Shows how many Pods, Services, and Secrets over time.
+- **CPU Usage (Pod)**: Graph of CPU use for each pod, in cores, over time.
+- **Memory Usage (Pod)**: Graph of Memory use for each pod, in MiB, over time.
+- **CPU Throttled (Pod)**: Shows seconds each pod’s CPU was throttled.
